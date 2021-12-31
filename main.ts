@@ -41,7 +41,6 @@ control.onEvent(EventBusSource.MES_DPAD_CONTROLLER_ID, EventBusValue.MES_DPAD_BU
 let strip: neopixel.Strip = null
 basic.showIcon(IconNames.Cow)
 robotbit.MotorStopAll()
-bluetooth.setTransmitPower(7)
 strip = neopixel.create(DigitalPin.P2, 64, NeoPixelMode.RGB)
 strip.setMatrixWidth(8, 0, 0)
 strip.setBrightness(32)
