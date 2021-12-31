@@ -5,8 +5,7 @@
         "core": "*",
         "microphone": "*",
         "robotbit": "github:kittenbot/pxt-robotbit#v0.3.8",
-        "bluetooth": "*",
-        "pxt-kitronik-servo-lite": "github:kitronikltd/pxt-kitronik-servo-lite#v1.0.5"
+        "bluetooth": "*"
     },
     "files": [
         "main.blocks",

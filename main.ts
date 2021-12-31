@@ -1,3 +1,21 @@
+control.onEvent(EventBusSource.MES_DPAD_CONTROLLER_ID, EventBusValue.MES_DPAD_BUTTON_C_DOWN, function () {
+    robotbit.MotorRun(robotbit.Motors.M1A, 32)
+    basic.pause(1000)
+    robotbit.MotorStop(robotbit.Motors.M1A)
+    robotbit.MotorRun(robotbit.Motors.M1A, -31)
+    basic.pause(2000)
+    robotbit.MotorStop(robotbit.Motors.M1A)
+})
+control.onEvent(EventBusSource.MES_DPAD_CONTROLLER_ID, EventBusValue.MES_DPAD_BUTTON_D_DOWN, function () {
+    robotbit.Servo(robotbit.Servos.S8, 0)
+    basic.pause(500)
+    robotbit.Servo(robotbit.Servos.S8, 90)
+    basic.pause(500)
+    robotbit.Servo(robotbit.Servos.S8, 0)
+    basic.pause(1000)
+    robotbit.Servo(robotbit.Servos.S8, 180)
+    basic.pause(100)
+})
 control.onEvent(EventBusSource.MES_DPAD_CONTROLLER_ID, EventBusValue.MES_DPAD_BUTTON_B_DOWN, function () {
     robotbit.rgb().showColor(neopixel.colors(NeoPixelColors.Red))
     robotbit.rgb().show()
@@ -22,6 +40,7 @@ control.onEvent(EventBusSource.MES_DPAD_CONTROLLER_ID, EventBusValue.MES_DPAD_BU
 })
 let strip: neopixel.Strip = null
 basic.showIcon(IconNames.Cow)
+robotbit.MotorStopAll()
 bluetooth.setTransmitPower(7)
 strip = neopixel.create(DigitalPin.P2, 64, NeoPixelMode.RGB)
 strip.setMatrixWidth(8, 0, 0)
