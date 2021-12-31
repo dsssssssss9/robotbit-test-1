@@ -49,6 +49,3 @@ strip.clear()
 strip.show()
 robotbit.rgb().clear()
 robotbit.rgb().show()
-basic.forever(function () {
-	
-})
