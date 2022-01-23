@@ -1,3 +1,6 @@
+/**
+ * test to send
+ */
 control.onEvent(EventBusSource.MES_DPAD_CONTROLLER_ID, EventBusValue.MES_DPAD_BUTTON_C_DOWN, function () {
     robotbit.MotorRun(robotbit.Motors.M1A, 32)
     basic.pause(1000)
